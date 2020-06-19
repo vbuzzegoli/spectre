@@ -1,0 +1,86 @@
+@import '../variables.scss';
+
+main {
+  background-color: $darker;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+.head {
+  flex: 1 0 none;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 20px 0px 20px;
+}
+
+.main-logo {
+  flex: 1 0 none;
+  height: 70px;
+}
+
+.close-btn-wrapper {
+  display: flex;
+  flex: 1 0 none;
+}
+.close-btn {
+  background-color: transparent;
+  border: none;
+}
+
+.close-btn--x {
+  background-color: darken($grey, 50);
+  padding: 4px 6px;
+  border-radius: 5px;
+  color: darken($grey, 50);
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: .85rem;
+  &:hover {
+    background-color:$warning;
+    color: white;
+  }
+}
+
+.content {
+  flex: 1 0 none;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+
+  &> {
+    flex: 1 0 none;
+  }
+}
+
+.button-row {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: row-reverse;
+
+  &> {
+    flex: 1 0 none;
+  }
+}
+
+.size-row {
+  display: flex;
+  justify-content: space-between;
+  &>input {
+    width: 41%;
+  }
+}
+
+.status {
+  align-self: center;
+  font-size: 1.3rem;
+  margin-right: 20px;
+}
+
+.warning {
+  color: $warning;
+}

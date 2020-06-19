@@ -1,0 +1,2 @@
+export const SET_STATUS = 'SET_STATUS'
+export const SET_PROCESSING = 'SET_PROCESSING'
