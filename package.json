@@ -1,7 +1,7 @@
 {
   "name": "spectre-app",
   "productName": "Spectre",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Victor Buzzegoli <vbuzze@gmail.com>",
   "description": "Make any web app a desktop app",
   "license": "CC0-1.0",

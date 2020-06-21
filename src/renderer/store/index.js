@@ -70,14 +70,20 @@ const actions = {
     }
 
     commit(types.SET_STATUS, { status: 'Configurating Engine..' })
-    await script.execFile('setupEngine').catch(() => {
+    try {
+      await script.execFile('setupEngine')
+    } catch (e) {
       dispatch('scriptFailed')
-    })
+      return
+    }
 
     commit(types.SET_STATUS, { status: 'Generating Application..' })
-    await script.execFile('generateApplication', [ JSON.stringify(configuration) ]).catch(() => {
+    try {
+      await script.execFile('generateApplication', [ JSON.stringify(configuration) ])
+    } catch (e) {
       dispatch('scriptFailed')
-    })
+      return
+    }
 
     dispatch('temporaryLog', { message: 'Done!' })
     commit(types.SET_PROCESSING, false)
