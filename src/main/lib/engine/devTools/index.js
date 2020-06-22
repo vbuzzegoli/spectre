@@ -29,7 +29,9 @@ module.exports = {
       devTools.setup()
       devTools.open(w)
     } else {
-      devTools.disable(w)
+      // TODO: Disable in prod when beta is done
+      devTools.setup()
+      // devTools.disable(w)
     }
   }
 }

@@ -1,14 +1,14 @@
 {
   "name": "spectre-app",
   "productName": "Spectre",
-  "version": "1.0.1",
+  "version": "1.1.0-beta",
   "author": "Victor Buzzegoli <vbuzze@gmail.com>",
   "description": "Make any web app a desktop app",
   "license": "CC0-1.0",
   "main": "./dist/electron/main.js",
   "scripts": {
     "build": "npm run build:darwin",
-    "build:darwin": "cross-env BUILD_TARGET=darwin node .electron-vue/build.js",
+    "build:darwin": "cross-env BUILD_TARGET=darwin node .electron-vue/build.js && npm rebuild --runtime=electron --target=2.0.18 --disturl=https://atom.io/download/electron --abi=57",
     "dev": "node .electron-vue/dev-runner.js",
     "e2e": "npm run pack && mocha test/e2e",
     "lint": "eslint --ext .js,.vue -f ./node_modules/eslint-friendly-formatter src test",
@@ -23,6 +23,7 @@
   "dependencies": {
     "axios": "^0.18.0",
     "electron-context-menu": "^0.16.0",
+    "firebase-admin": "7.4.0",
     "vue": "^2.5.16",
     "vue-electron": "^1.0.6",
     "vue-router": "^3.0.1",
@@ -52,7 +53,7 @@
     "electron-debug": "^1.5.0",
     "electron-devtools-installer": "^2.2.4",
     "electron-packager": "^12.1.0",
-    "electron-rebuild": "^1.8.1",
+    "electron-rebuild": "^1.11.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-friendly-formatter": "^4.0.1",

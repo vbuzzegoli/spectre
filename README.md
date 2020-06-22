@@ -10,17 +10,14 @@ _Spectre_ is a software that allows you to **create desktop applications for any
 
 ![spectre](spectre.png)
 
-- **[DOWNLOAD APPLICATION HERE](https://github.com/vbuzzegoli/spectre-dist/raw/master/Spectre.zip)**
+- **[DOWNLOAD APPLICATION HERE (v1.1.0-beta)](https://github.com/vbuzzegoli/spectre-dist/raw/master/Spectre.zip)**
 - Unzip the compressed file by double-clicking on it
 - Move the newly uncompressed `Spectre.app` to your _Applications_ folder
+- **Important: You may need to authorize Spectre.** Double-click on the app to open it, the application will likely be blocked as is a third party application. Once blocked, open `System Preferences`, click on `Security & Privacy` (`General` tab), and click on `Open Anyway`. You will not have to repeat these steps anymore.
 
 That's it. :raised_hands:
 
 You can now **make any web application and desktop application**.
-
-You can launch _Spectre_ like any other applications, for example using the Spotlight Search:
-   
-   - press `Cmd+Space` > type `Spectre` > press `Enter/Return`
 
 ### For Developers
 
@@ -91,7 +88,7 @@ Here is a list of amazing web apps that could use a desktop application, to get 
 
 > We wanna hear about your favorite apps! [@victorbuzzegoli](https://twitter.com/victorbuzzegoli)
 
-> Note: Names should not contain spaces.
+> Important: Names are case-sentive and should not contain spaces or any symbols other than dashes (-).
 
 ## Support
 

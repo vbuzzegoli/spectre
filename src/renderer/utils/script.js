@@ -1,3 +1,5 @@
+/* eslint prefer-promise-reject-errors: 0 */
+
 const execFile = require('child_process').execFile
 const path = require('path')
 const { remote } = require('electron')
@@ -28,10 +30,12 @@ export default {
   execFile (scriptName, opts = [], config = {}, log = true) {
     return new Promise((resolve, reject) => {
       execFile(path.join(remote.app.getAppPath(), `scripts/${scriptName}.sh`), opts, config, (error, stdout, stderr) => {
-        if (log) console.info(decode(stdout))
+        const decodedStdOut = decode(stdout)
+        const decodedStdErr = decode(stderr)
+        if (log && decodedStdOut) console.info(decodedStdOut)
         if (error) {
-          if (log) console.warn(decode(stderr))
-          return reject(error)
+          if (log && decodedStdErr) console.warn(decodedStdErr)
+          return reject({ error, stderr: decodedStdErr, sdtout: decodedStdOut })
         }
         return resolve()
       })
