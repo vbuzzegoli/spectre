@@ -10,7 +10,7 @@ _Spectre_ is a software that allows you to **create desktop applications for any
 
 ![spectre](spectre.png)
 
-- **[DOWNLOAD APPLICATION HERE (v1.1.0-beta)](https://github.com/vbuzzegoli/spectre-dist/raw/master/Spectre.zip)**
+- **[DOWNLOAD APPLICATION HERE](https://github.com/vbuzzegoli/spectre-dist/raw/master/Spectre.zip)** _- v1.1.0-beta_
 - Unzip the compressed file by double-clicking on it
 - Move the newly uncompressed `Spectre.app` to your _Applications_ folder
 - **Important: You may need to authorize Spectre.** Double-click on the app to open it, the application will likely be blocked as is a third party application. Once blocked, open `System Preferences`, click on `Security & Privacy` (`General` tab), and click on `Open Anyway`. You will not have to repeat these steps anymore.

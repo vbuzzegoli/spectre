@@ -41,7 +41,7 @@ const actions = {
    */
   scriptFailed ({ dispatch, commit }, { step, exception }) {
     // Log to remote (fire and forget)
-    api.logException({ step, exception: { ...exception, error: { ...exception.error } } }) // clone error instance into agnostic object
+    api.logException({ step, exception })
     // Update UX
     dispatch('temporaryLog', { message: 'Something went wrong', warn: true })
     commit(types.SET_PROCESSING, false)

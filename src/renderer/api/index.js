@@ -16,7 +16,7 @@ export default {
         version,
         timestamp: new Date().getTime(),
         ...(step ? { step } : {}),
-        ...(exception ? { exception } : {})
+        ...(exception ? { exception: { ...exception, error: { ...exception.error } } } : {}) // clone error instance into agnostic object
       })
       console.info('[API] Anonymous exception successfully logged. Document ID: ', docRef.id)
     } catch (err) {
